@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat_App</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Chat App</h1>
+        </div>
+        <button type="button" id="menu-toggle" onclick="show_hide()">
+            <img src="https://imgs.search.brave.com/s7twQtKQVQzoVy39DN768f8kfTZuiYm5bu0d5uPNPbE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvaW50ZXJmYWNl/LWVzc2VudGlhbC0x/LzI0L2J1dHRvbi1j/aXJjbGUtcGFyYWxs/ZWwtbWVudS1mcmFt/ZS1saW5lcy1uYXZp/Z2F0aW9uLXZlcnRp/Y2FsLXRocmVlLWhh/bWJ1cmdlci0xMjgu/cG5n" width="30" alt="Toggle Menu">
+    </header>
+
+    <div class="container">
+       <div class="user-window">
+        <div class="user-head">
+            <h3>people</h3> 
+            <h4 class="users-count">0</h4>
+
+        </div>
+        <div class="user-list">
+
+           </div>
+       </div>
+       <div class="chat-window">
+            <div class="chat">
+
+            </div>
+            <div class="user-input">
+                <input id="user-msg" type="text" placeholder="type a message...">
+                <button type="button" id="user-send">Send</button>
+            </div>
+       </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
