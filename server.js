@@ -8,16 +8,12 @@ const port = process.env.PORT || 3000;
 const io = require("socket.io")(server);
 
 let users = {};
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(path.join(__dirname, "public")));
-
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get("/chat.html", (req, res) => {
-    res.sendFile(path.join(__dirname, "Chat.html"));
-});
 
 io.on("connection", (socket) => {
     console.log("New connection established");
